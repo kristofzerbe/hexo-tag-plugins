@@ -165,40 +165,6 @@ Something has failed!
 
 ---
 
-## XXX (tag-XXX)
-
-XXX
-
-**Prequisites:**
-
-XXX
-
-**Syntax:**  
-
-```txt
-{% XXX %}``
-```
-
-**Example:**
-
-```js
-XXX
-```
-
-**Output:**
-
-```html
-XXX
-```
-
-**VS Code Snippet:**
-
-```json
-XXX
-```
-
----
-
 ## License
 
 **MIT** : http://opensource.org/licenses/MIT
