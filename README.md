@@ -165,6 +165,58 @@ Something has failed!
 
 ![-](divider.png)
 
+## Alternative Blockquote (tag-blockquote_alt)
+
+An alternative blockquote tag plugin for quotes with citator and reference url.
+
+**Syntax:**  
+
+```txt
+{% blockquote_alt cite [citeUrl] %}
+quote
+{% endblockquote_alt %}
+```
+
+**Example:**
+
+```js
+{% blockquote_alt "Anonymous" "https://en.wikipedia.org/wiki/Lorem_ipsum" %}
+Lorem ipsum dolor sit amet...
+{% endblockquote_alt %}
+```
+
+**Output:**
+
+```html
+<div>
+  <blockquote>
+    <p>Lorem ipsum dolor sit amet…</p>
+  </blockquote>
+  <cite>
+    <a href="https://en.wikipedia.org/wiki/Lorem_ipsum">--- Anonymous</a>
+  </cite>
+</div>
+```
+
+![Alternative Blockquote Example](tag-blockqoute_alt-example.png)
+
+**VS Code Snippet:**
+
+```json
+"hexo.kiko-io.blockquote": {
+  "scope": "markdown",
+  "prefix": "hexo.kiko-io.blockquote",
+  "body": [
+    "{% blockquote_alt \"${1:cite}\" \"${2:citeUrl}\" %}",
+    "${3:content}",
+    "{% endblockquote_alt %}"
+  ],
+  "description": "Insert kiko.io's blockquote"
+}
+```
+
+![-](divider.png)
+
 ## License
 
 **MIT** : http://opensource.org/licenses/MIT
