@@ -34,6 +34,7 @@ Every tag plugin includes a description in the header how to use it. The syntax 
 * [Anchorlist (tag-anchorlist)]()
 * [Alertbox (tag-alertbox)]()
 * [Alternative Blockquote (tag-blockquote_alt)](#alternative-blockquote-tag-blockquote_alt)
+* [Blockquote Details](#blockquote-details-tag-blockquote_details)
 
 ![-](divider.png)
 
