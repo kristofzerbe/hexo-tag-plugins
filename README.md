@@ -30,10 +30,10 @@ Every tag plugin includes a description in the header how to use it. The syntax 
 
 ## Plugins
 
-[Anchor (tag-anchor)](#anchor-tag-anchor)
-[Anchorlist (tag-anchorlist)]()
-[Alertbox (tag-alertbox)]()
-[Alternative Blockquote (tag-blockquote_alt)](#alternative-blockquote-tag-blockquote_alt)
+* [Anchor (tag-anchor)](#anchor-tag-anchor)
+* [Anchorlist (tag-anchorlist)]()
+* [Alertbox (tag-alertbox)]()
+* [Alternative Blockquote (tag-blockquote_alt)](#alternative-blockquote-tag-blockquote_alt)
 
 ![-](divider.png)
 
