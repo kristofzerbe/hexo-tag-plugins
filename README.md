@@ -244,7 +244,7 @@ quote
 
 ```js
 {% blockquote_details "Lorem ipsum" "Anonymous" "https://en.wikipedia.org/wiki/Lorem_ipsum" %}
-Lorem ipsum dolor sit amet...
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 {% endblockquote_details %}
 ```
 
@@ -254,7 +254,9 @@ Lorem ipsum dolor sit amet...
 <details>
   <summary>Lorem ipsum</summary>
   <blockquote>
-    <p>Lorem ipsum dolor sit amet…</p>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+    </p>
   </blockquote>
   <cite>
     <a href="https://en.wikipedia.org/wiki/Lorem_ipsum">--- Anonymous</a>
