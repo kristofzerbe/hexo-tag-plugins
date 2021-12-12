@@ -1,3 +1,6 @@
+[![issues](https://img.shields.io/github/issues/kristofzerbe/hexo-tag-plugins?label=github%20issues&style=flat-square)](https://github.com/kristofzerbe/hexo-tag-plugins/issues)
+[![Open in Visual Studio Code](https://open.vscode.dev/badges/open-in-vscode.svg)](https://open.vscode.dev/kristofzerbe/hexo-tag-plugins)
+
 # hexo-tag-plugins
 
 **Hexo Tag Plugin Collection from kiko.io**
@@ -26,17 +29,17 @@ Every tag plugin includes a description in the header how to use it. The syntax 
 | ``param:(option1,option2)`` | parameter option list to choose one option |
 | ``..."value1\|value2"``| pipe delimitered array of values |
 
-![-](divider.png)
+![-](assets/divider.png)
 
 ## Plugins
 
-* [Anchor (tag-anchor)](#anchor-tag-anchor)
-* [Anchorlist (tag-anchorlist)]()
-* [Alertbox (tag-alertbox)]()
-* [Alternative Blockquote (tag-blockquote_alt)](#alternative-blockquote-tag-blockquote_alt)
-* [Blockquote Details](#blockquote-details-tag-blockquote_details)
+- [Anchor (tag-anchor)](#anchor-tag-anchor)
+- [Anchorlist (tag-anchorlist)]()
+- [Alertbox (tag-alertbox)]()
+- [Alternative Blockquote (tag-blockquote_alt)](#alternative-blockquote-tag-blockquote_alt)
+- [Blockquote Details](#blockquote-details-tag-blockquote_details)
 
-![-](divider.png)
+![-](assets/divider.png)
 
 ## Anchor (tag-anchor)
 
@@ -73,7 +76,7 @@ A simple anchor element as ``A``- or ``HR``-Tag as jump target for example from 
 }
 ```
 
-![-](divider.png)
+![-](assets/divider.png)
 
 ## Anchorlist (tag-anchorlist)
 
@@ -107,7 +110,7 @@ Creates an overview of all anchors in the content with jump links.
 </ul>
 ```
 
-![Anchorlist Example](tag-anchorlist-example.png)
+![Anchorlist Example](assets/tag-anchorlist-example.png)
 
 **VS Code Snippet:**
 
@@ -122,7 +125,7 @@ Creates an overview of all anchors in the content with jump links.
 }
 ```
 
-![-](divider.png)
+![-](assets/divider.png)
 
 ## Alertbox (tag-alertbox)
 
@@ -156,7 +159,7 @@ Something has failed!
 </div>
 ```
 
-![Alertbox Example](tag-alertbox-example.png)
+![Alertbox Example](assets/tag-alertbox-example.png)
 
 **VS Code Snippet:**
 
@@ -173,7 +176,7 @@ Something has failed!
 }
 ```
 
-![-](divider.png)
+![-](assets/divider.png)
 
 ## Alternative Blockquote (tag-blockquote_alt)
 
@@ -208,7 +211,7 @@ Lorem ipsum dolor sit amet...
 </div>
 ```
 
-![Alternative Blockquote Example](tag-blockqoute_alt-example.png)
+![Alternative Blockquote Example](assets/tag-blockqoute_alt-example.png)
 
 **VS Code Snippet:**
 
@@ -225,7 +228,7 @@ Lorem ipsum dolor sit amet...
 }
 ```
 
-![-](divider.png)
+![-](assets/divider.png)
 
 ## Blockquote Details (tag-blockquote_details)
 
@@ -264,7 +267,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 </details>
 ```
 
-![Blogqoute Details Example](tag-blockqoute_details-example.png)
+![Blogqoute Details Example](assets/tag-blockqoute_details-example.png)
 
 **VS Code Snippet:**
 
@@ -281,8 +284,15 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 }
 ```
 
-![-](divider.png)
+![-](assets/divider.png)
 
+## History
+
+**2021-12-12** 
+- Initial Commit
+
+**2021-12-13** 
+- [xxx](#xxx) added
 ## License
 
 **MIT** : http://opensource.org/licenses/MIT
