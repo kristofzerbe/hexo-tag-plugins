@@ -290,7 +290,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 ## Codepen (tag-codepen)
 
-Tag Plugin for embedding a pen from [codepen.io](https://codepen.io).
+Embedding a pen from [codepen.io](https://codepen.io).
 
 **Prequisites:**
 
@@ -354,7 +354,7 @@ codepen:
 
 ## CodeSandbox (tag-codesandbox)
 
-Tag Plugin for embedding a sandbox from [CodeSandbox](https://codesandbox.io/).
+Embedding a sandbox from [CodeSandbox](https://codesandbox.io/).
 
 **Syntax:**  
 
