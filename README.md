@@ -37,7 +37,8 @@ Every tag plugin includes a description in the header how to use it. The syntax 
 - [Anchorlist (tag-anchorlist)]()
 - [Alertbox (tag-alertbox)]()
 - [Alternative Blockquote (tag-blockquote_alt)](#alternative-blockquote-tag-blockquote_alt)
-- [Blockquote Details](#blockquote-details-tag-blockquote_details)
+- [Blockquote Details (tag-blockquote_details)](#blockquote-details-tag-blockquote_details)
+- [Codepen (tag-codepen)](#codepen-tag-codepen)
 
 ![-](assets/divider.png)
 
@@ -284,6 +285,70 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 }
 ```
 
+![-](divider.png)
+
+## Codepen (tag-codepen)
+
+Tag Plugin for embedding a pen from [codepen.io](https://codepen.io).
+
+**Prequisites:**
+
+You need following configuration section in your `_config.yml`:
+
+```yml
+# Codepen Defaults
+codepen:
+  user_id: "your-name"
+  default_tab: "js"
+  height: 400
+  width: "100%"
+```
+
+**Syntax:**  
+
+```txt
+{% codepen "slugHash" "title" defaultTab:(html,js,css) [height] [width] %}
+```
+
+**Example:**
+
+```js
+{% codepen "MWEbERg" "Lorem Ipsum" html %}
+```
+
+**Output:**
+
+```html
+<iframe 
+  height="400" 
+  id="codepen-MWEbERg" 
+  class="codepen" 
+  src="https://codepen.io/kristofzerbe/embed/MWEbERg?height=400&amp;default-tab=html,result&amp;theme-id=light" 
+  style="width: 100%;" 
+  scrolling="no" 
+  title="Codepen: Lorem Ipsum" 
+  frameborder="no" 
+  loading="lazy" 
+  allowtransparency="true" 
+  allowfullscreen="true">
+</iframe>
+```
+
+![Codepen Example](assets/tag-codepen-example.png)
+
+**VS Code Snippet:**
+
+```json
+"hexo.kiko-io.codepen": {
+  "scope": "markdown",
+  "prefix": "hexo.kiko-io.codepen",
+  "body": [
+    "{% codepen \"${1:slugHash}\" \"${2:title}\" ${3|html,js,css|} ${4:height} ${5:width} %}"
+  ],
+  "description": "Insert kiko.io's codepen"
+}
+```
+
 ![-](assets/divider.png)
 
 ## History
@@ -291,8 +356,6 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 **2021-12-12** 
 - Initial Commit
 
-**2021-12-13** 
-- [xxx](#xxx) added
 ## License
 
 **MIT** : http://opensource.org/licenses/MIT
