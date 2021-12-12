@@ -28,6 +28,15 @@ Every tag plugin includes a description in the header how to use it. The syntax 
 
 ![-](divider.png)
 
+## Plugins
+
+[Anchor (tag-anchor)](#anchor-tag-anchor)
+[Anchorlist (tag-anchorlist)]()
+[Alertbox (tag-alertbox)]()
+[Alternative Blockquote (tag-blockquote_alt)](#alternative-blockquote-tag-blockquote_alt)
+
+![-](divider.png)
+
 ## Anchor (tag-anchor)
 
 A simple anchor element as ``A``- or ``HR``-Tag as jump target for example from a ``Anchorlist``.
