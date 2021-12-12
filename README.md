@@ -226,6 +226,60 @@ Lorem ipsum dolor sit amet...
 
 ![-](divider.png)
 
+## Blockquote Details (tag-blockquote_details)
+
+Blockquote including summary, citator and reference url, wrapped in a ``details`` tag.
+
+**Syntax:**  
+
+```txt
+{% blockquote_details [summary] [cite] [citeUrl] %}
+quote
+{% endblockquote_details %}
+
+```
+
+**Example:**
+
+```js
+{% blockquote_details "Lorem ipsum" "Anonymous" "https://en.wikipedia.org/wiki/Lorem_ipsum" %}
+Lorem ipsum dolor sit amet...
+{% endblockquote_details %}
+```
+
+**Output:**
+
+```html
+<details>
+  <summary>Lorem ipsum</summary>
+  <blockquote>
+    <p>Lorem ipsum dolor sit amet…</p>
+  </blockquote>
+  <cite>
+    <a href="https://en.wikipedia.org/wiki/Lorem_ipsum">--- Anonymous</a>
+  </cite>
+</details>
+```
+
+![Blogqoute Details Example](tag-blockqoute_details-example.png)
+
+**VS Code Snippet:**
+
+```json
+"hexo.kiko-io.blockquote_details": {
+  "scope": "markdown",
+  "prefix": "hexo.kiko-io.blockquote_details",
+  "body": [
+    "{% blockquote_details \"${1:summary}\" \"${2:cite}\" \"${3:citeUrl}\" %}",
+    "${4:quote}",
+    "{% endblockquote_details %}"
+  ],
+  "description": "Insert kiko.io's blockquote_details"
+}
+```
+
+![-](divider.png)
+
 ## License
 
 **MIT** : http://opensource.org/licenses/MIT
