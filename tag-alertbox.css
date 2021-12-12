@@ -1,0 +1,96 @@
+@font-face {
+  font-family: fa-icon-solid;
+  font-style: normal;
+  font-weight: 900;
+  src: url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/webfonts/fa-solid-900.eot");
+  src: url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/webfonts/fa-solid-900.eot?#iefix") format("embedded-opentype"), 
+       url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/webfonts/fa-solid-900.woff2") format("woff2"), 
+       url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/webfonts/fa-solid-900.woff") format("woff"), 
+       url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/webfonts/fa-solid-900.ttf") format("truetype"), 
+       url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/webfonts/fa-solid-900.svg#fontawesome") format("svg");
+}
+  
+.alertbox {
+  position: relative;
+  padding: 20px 20px 20px 32px;
+  margin: 20px 0;
+}
+.alertbox.alertbox-exclamation {
+  border-left: 4px #fc0 solid;
+  background-color: rgba(255,204,0,0.2);
+}
+.alertbox.alertbox-question {
+  border-left: 4px #d0f solid;
+  background-color: rgba(221,0,255,0.2);
+}
+.alertbox.alertbox-warning {
+  border-left: 4px #e22500 solid;
+  background-color: rgba(226,37,0,0.2);
+}
+.alertbox.alertbox-info {
+  border-left: 4px #0088e0 solid;
+  background-color: rgba(0,136,224,0.2);
+}
+.alertbox.alertbox-success {
+  border-left: 4px #00bb1c solid;
+  background-color: rgba(0,187,28,0.2);
+}
+.alertbox.alertbox-note {
+  border-left: 4px #cdcdcd solid;
+  background-color: rgba(205,205,205,0.2);
+}
+.alertbox::before {
+  position: absolute;
+  width: 41px;
+  height: 41px;
+  top: -13px;
+  left: -22px;
+  display: block;
+  border-radius: 50%;
+  content: "";
+  background: #fff;
+}
+[data-theme="dark"] .alertbox::before {
+  background: #333;
+}
+.alertbox::after {
+  position: absolute;
+  display: block;
+  top: -8px;
+  left: -16px;
+  font-family: fa-icon-solid;
+  font-size: 28px;
+}
+.alertbox.alertbox-exclamation::after {
+  color: #fc0;
+  content: "\f06a";
+}
+.alertbox.alertbox-question::after {
+  color: #d0f;
+  content: "\f059";
+}
+.alertbox.alertbox-warning::after {
+  color: #e22500;
+  content: "\f057";
+}
+.alertbox.alertbox-info::after {
+  color: #0088e0;
+  content: "\f05a";
+}
+.alertbox.alertbox-success::after {
+  color: #00bb1c;
+  content: "\f058";
+}
+.alertbox.alertbox-note::after {
+  color: #cdcdcd;
+  content: "\f35a";
+}
+.alertbox * {
+  margin: 0 !important;
+}
+li > .alertbox {
+  margin: 12px;
+}
+li > .alertbox::before {
+  top: -17px;
+}
