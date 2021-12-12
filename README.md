@@ -285,7 +285,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 }
 ```
 
-![-](divider.png)
+![-](assets/divider.png)
 
 ## Codepen (tag-codepen)
 
