@@ -39,6 +39,7 @@ Every tag plugin includes a description in the header how to use it. The syntax 
 - [Alternative Blockquote (tag-blockquote_alt)](#alternative-blockquote-tag-blockquote_alt)
 - [Blockquote Details (tag-blockquote_details)](#blockquote-details-tag-blockquote_details)
 - [Codepen (tag-codepen)](#codepen-tag-codepen)
+- [CodeSandbox (tag-codesandbox)](#codesandbox-tag-codesandbox)
 
 ![-](assets/divider.png)
 
@@ -346,6 +347,50 @@ codepen:
     "{% codepen \"${1:slugHash}\" \"${2:title}\" ${3|html,js,css|} ${4:height} ${5:width} %}"
   ],
   "description": "Insert kiko.io's codepen"
+}
+```
+
+![-](assets/divider.png)
+
+## CodeSandbox (tag-codesandbox)
+
+Tag Plugin for embedding a sandbox from [CodeSandbox](https://codesandbox.io/).
+
+**Syntax:**  
+
+```txt
+{% codesandbox "slugHash" "title" [height] [width] %}
+```
+
+**Example:**
+
+```js
+{% codesandbox "cool-shamir-de613" "Lorem Ipsum" 300 %}
+```
+
+**Output:**
+
+```html
+<iframe 
+  src="https://codesandbox.io/embed/cool-shamir-de613?fontsize=14&amp;theme=light" 
+  style="width:100%; height:300px; border:0; overflow:hidden;" 
+  title="Lorem Ipsum" 
+  sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts">
+</iframe>
+```
+
+![CodeSandbox Example](assets/tag-codesandbox-example.png)
+
+**VS Code Snippet:**
+
+```json
+"hexo.kiko-io.codesandbox": {
+  "scope": "markdown",
+  "prefix": "hexo.kiko-io.codesandbox",
+  "body": [
+    "{% codesandbox ${1:\"slugHash}\" \"${2:title}\" ${3:height} ${4:width} %}"
+  ],
+  "description": "Insert kiko.io's codesandbox"
 }
 ```
 
