@@ -26,7 +26,7 @@ Every tag plugin includes a description in the header how to use it. The syntax 
 | ``param:(option1,option2)`` | parameter option list to choose one option |
 | ``..."value1\|value2"``| pipe delimitered array of values |
 
----
+![-](divider.png)
 
 ## Anchor (tag-anchor)
 
@@ -63,7 +63,7 @@ A simple anchor element as ``A``- or ``HR``-Tag as jump target for example from 
 }
 ```
 
----
+![-](divider.png)
 
 ## Anchorlist (tag-anchorlist)
 
@@ -112,7 +112,7 @@ Creates an overview of all anchors in the content with jump links.
 }
 ```
 
----
+![-](divider.png)
 
 ## Alertbox (tag-alertbox)
 
@@ -163,7 +163,7 @@ Something has failed!
 }
 ```
 
----
+![-](divider.png)
 
 ## License
 
