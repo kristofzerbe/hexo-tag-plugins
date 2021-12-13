@@ -33,19 +33,23 @@ Every tag plugin includes a description in the header how to use it. The syntax 
 
 ## Plugins
 
-- [Anchor (tag-anchor)](#anchor-tag-anchor)
-- [Anchorlist (tag-anchorlist)]()
-- [Alertbox (tag-alertbox)]()
-- [Alternative Blockquote (tag-blockquote_alt)](#alternative-blockquote-tag-blockquote_alt)
-- [Blockquote Details (tag-blockquote_details)](#blockquote-details-tag-blockquote_details)
-- [Codepen (tag-codepen)](#codepen-tag-codepen)
-- [CodeSandbox (tag-codesandbox)](#codesandbox-tag-codesandbox)
+- [Anchor](#anchor)
+- [Anchorlist](#anchorlist)
+- [Alertbox](#alertbox)
+- [Alternative Blockquote](#alternative-blockquote)
+- [Blockquote Details](#blockquote-details)
+- [Codepen](#codepen)
+- [CodeSandbox](#codesandbox)
 
 ![-](assets/divider.png)
 
-## Anchor (tag-anchor)
+## Anchor
 
 A simple anchor element as ``A``- or ``HR``-Tag as jump target for example from a ``Anchorlist``.
+
+**Files:**
+
+- [tag-anchor.js](https://github.com/kristofzerbe/hexo-tag-plugins/blob/main/tag-anchor.js)
 
 **Syntax:**  
 
@@ -80,10 +84,14 @@ A simple anchor element as ``A``- or ``HR``-Tag as jump target for example from 
 
 ![-](assets/divider.png)
 
-## Anchorlist (tag-anchorlist)
+## Anchorlist
 
 Creates an overview of all anchors in the content with jump links.
 
+**Files:**
+
+- [tag-anchorlist.js](https://github.com/kristofzerbe/hexo-tag-plugins/blob/main/tag-anchorlist.js)
+  
 **Syntax:**  
 
 ```txt
@@ -129,10 +137,15 @@ Creates an overview of all anchors in the content with jump links.
 
 ![-](assets/divider.png)
 
-## Alertbox (tag-alertbox)
+## Alertbox
 
 Renders a iconized colored box with text for warnings or with some special information. 6 styles are provided: Exclamation, Question, Warning, Info, Success and Note.
 
+**Files:**
+
+- [tag-alertbox.js](https://github.com/kristofzerbe/hexo-tag-plugins/blob/main/tag-alertbox.js)
+- [tag-alertbox.css](https://github.com/kristofzerbe/hexo-tag-plugins/blob/main/tag-alertbox.css)
+  
 **Prequisites:**
 
 The icons are from the font **FontAwesome Free Solid**, you need to reference in your CSS either from your project or from a CDN. You will find such  references in the file ``tag-alertbox.css``, together with all other necessary styles.
@@ -180,10 +193,14 @@ Something has failed!
 
 ![-](assets/divider.png)
 
-## Alternative Blockquote (tag-blockquote_alt)
+## Alternative Blockquote
 
 An alternative blockquote tag plugin for quotes with citator and reference url.
 
+**Files:**
+
+- [tag-blockquote_alt.js](https://github.com/kristofzerbe/hexo-tag-plugins/blob/main/tag-blockquote_alt.js)
+  
 **Syntax:**  
 
 ```txt
@@ -232,10 +249,14 @@ Lorem ipsum dolor sit amet...
 
 ![-](assets/divider.png)
 
-## Blockquote Details (tag-blockquote_details)
+## Blockquote Details
 
 Blockquote including summary, citator and reference url, wrapped in a ``details`` tag.
 
+**Files:**
+
+- [tag-blockquote_details.js](https://github.com/kristofzerbe/hexo-tag-plugins/blob/main/tag-blockquote_details.js)
+  
 **Syntax:**  
 
 ```txt
@@ -288,10 +309,14 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 ![-](assets/divider.png)
 
-## Codepen (tag-codepen)
+## Codepen
 
 Embedding a pen from [codepen.io](https://codepen.io).
 
+**Files:**
+
+- [tag-codepen.js](https://github.com/kristofzerbe/hexo-tag-plugins/blob/main/tag-codepen.js)
+  
 **Prequisites:**
 
 You need following configuration section in your `_config.yml`:
@@ -352,9 +377,13 @@ codepen:
 
 ![-](assets/divider.png)
 
-## CodeSandbox (tag-codesandbox)
+## CodeSandbox
 
 Embedding a sandbox from [CodeSandbox](https://codesandbox.io/).
+
+**Files:**
+
+- [tag-codesandbox.js](https://github.com/kristofzerbe/hexo-tag-plugins/blob/main/tag-codesandbox.js)
 
 **Syntax:**  
 
