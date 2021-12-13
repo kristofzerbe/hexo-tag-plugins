@@ -182,6 +182,8 @@ Something has failed!
 
 ![Alertbox Example](assets/tag-alertbox-example.png)
 
+See a live example at [https://kiko.io/post/Hexo-Tag-Plugin-Collection/#alertbox](https://kiko.io/post/Hexo-Tag-Plugin-Collection/#alertbox)
+
 **VS Code Snippet:**
 
 ```json
@@ -237,6 +239,8 @@ Lorem ipsum dolor sit amet...
 ```
 
 ![Alternative Blockquote Example](assets/tag-blockqoute_alt-example.png)
+
+See a live example at [https://kiko.io/post/Hexo-Tag-Plugin-Collection/#blockquote_alt](https://kiko.io/post/Hexo-Tag-Plugin-Collection/#blockquote_alt)
 
 **VS Code Snippet:**
 
@@ -296,7 +300,9 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 </details>
 ```
 
-![Blogqoute Details Example](assets/tag-blockqoute_details-example.png)
+![Blockqoute Details Example](assets/tag-blockqoute_details-example.png)
+
+See a live example at [https://kiko.io/post/Hexo-Tag-Plugin-Collection/#blockquote_details](https://kiko.io/post/Hexo-Tag-Plugin-Collection/#blockquote_details)
 
 **VS Code Snippet:**
 
@@ -368,6 +374,8 @@ codepen:
 
 ![Codepen Example](assets/tag-codepen-example.png)
 
+See a live example at [https://kiko.io/post/Hexo-Tag-Plugin-Collection/#codepen](https://kiko.io/post/Hexo-Tag-Plugin-Collection/#codepen)
+
 **VS Code Snippet:**
 
 ```json
@@ -416,6 +424,8 @@ Embedding a sandbox from [CodeSandbox](https://codesandbox.io/).
 
 ![CodeSandbox Example](assets/tag-codesandbox-example.png)
 
+See a live example at [https://kiko.io/post/Hexo-Tag-Plugin-Collection/#codesandbox](https://kiko.io/post/Hexo-Tag-Plugin-Collection/#codesandbox)
+
 **VS Code Snippet:**
 
 ```json
@@ -463,6 +473,8 @@ Button link for downloading an asset file, with additional caption ("Download &l
 ```
 
 ![Download Link Example](assets/tag-download-link-example.png)
+
+See a live example at [https://kiko.io/post/Hexo-Tag-Plugin-Collection/#download-link](https://kiko.io/post/Hexo-Tag-Plugin-Collection/#download-link)
 
 **VS Code Snippet:**
 
@@ -542,6 +554,8 @@ As this tag plugin relies on an external JS library, the files ``image-compare-v
 ```
 
 ![Image Compare Example](assets/tag-image-compare-example.png)
+
+See a live example at [https://kiko.io/post/Hexo-Tag-Plugin-Collection/#image-compare](https://kiko.io/post/Hexo-Tag-Plugin-Collection/#image-compare)
 
 **VS Code Snippet:**
 
@@ -671,7 +685,9 @@ The CSS file doesn't include styles for the ``.tns-nav`` and its controls, but y
 </script>
 ```
 
-![Image Slide Example](assets/image-slide-example.png)
+![Image Slide Example](assets/tag-image-slide-example.png)
+
+See a live example at [https://kiko.io/post/Hexo-Tag-Plugin-Collection/#image-slide](https://kiko.io/post/Hexo-Tag-Plugin-Collection/#image-slide)
 
 **VS Code Snippet:**
 
@@ -734,6 +750,8 @@ indiepen:
 
 ![Indiepen Example](assets/tag-indiepen-example.png)
 
+See a live example at [https://kiko.io/post/Hexo-Tag-Plugin-Collection/#indiepen](https://kiko.io/post/Hexo-Tag-Plugin-Collection/#indiepen)
+
 **VS Code Snippet:**
 
 ```json
@@ -789,6 +807,8 @@ Renders a list of related, informative links regarding a post.
 ```
 
 ![More Info Example](assets/tag-more-info-example.png)
+
+See a live example at [https://kiko.io/post/Hexo-Tag-Plugin-Collection/#more-info](https://kiko.io/post/Hexo-Tag-Plugin-Collection/#more-info)
 
 **VS Code Snippet:**
 
