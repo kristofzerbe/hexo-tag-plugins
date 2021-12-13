@@ -40,6 +40,12 @@ Every tag plugin includes a description in the header how to use it. The syntax 
 - [Blockquote Details](#blockquote-details)
 - [Codepen](#codepen)
 - [CodeSandbox](#codesandbox)
+- [Download Link](#download-link)
+- [Image Compare](#image-compare)
+- [Image Link](#image-link)
+- [Image Slide](#image-slide)
+- [Indiepen](#indiepen)
+- [More Info](#more-info)
 
 ![-](assets/divider.png)
 
@@ -420,6 +426,397 @@ Embedding a sandbox from [CodeSandbox](https://codesandbox.io/).
     "{% codesandbox ${1:\"slugHash}\" \"${2:title}\" ${3:height} ${4:width} %}"
   ],
   "description": "Insert kiko.io's codesandbox"
+}
+```
+
+
+![-](assets/divider.png)
+
+## Download Link
+
+Button link for downloading an asset file, with additional caption ("Download &lt;additionalCaption&gt; &lt;assetFile&gt;").
+
+**Files:**
+
+- [tag-download-link.js](https://github.com/kristofzerbe/hexo-tag-plugins/blob/main/tag-download-link.js)
+
+**Syntax:**  
+
+```txt
+{% download_link "assetFile" ["additionalCaption"] %}
+```
+
+**Example:**
+
+```js
+{% download_link "example-image_ORIGINAL.jpg" "Photo" %}
+```
+
+**Output:**
+
+```html
+<p class="download-link">
+  <a class="button" href="example-image_ORIGINAL.jpg" download="">
+    Download Photo <strong>example-image_ORIGINAL.jpg</strong>
+  </a>
+</p>
+```
+
+![Download Link Example](assets/tag-download-link-example.png)
+
+**VS Code Snippet:**
+
+```json
+"hexo.kiko-io.download_link": {
+  "scope": "markdown",
+  "prefix": "hexo.kiko-io.download_link",
+  "body": [
+    "{% download_link \"${1:assetFile}\" \"${2:additionalCaption}\" %}"
+  ],
+  "description": "Insert kiko.io's download_link"
+}
+```
+
+![-](assets/divider.png)
+
+## Image Compare
+
+Comparing two asset images side-by-side with the aid of the JS library [Image Compare Viewer](https://image-compare-viewer.netlify.app/).
+
+**Files:**
+
+- [tag-image-compare.js](https://github.com/kristofzerbe/hexo-tag-plugins/blob/main/tag-image-compare.js)
+  
+**Prequisites:**
+
+As this tag plugin relies on an external JS library, the files ``image-compare-viewer.js`` and ``image-compare-viewer.css`` (or its minified versions) must be loaded in the header of the web page.
+
+**Syntax:**  
+
+```txt
+{% image_compare 
+  "imgFileOriginal" 
+  "imgFileModified" 
+  "descriptionModified" 
+  [orientation=vertical] 
+%}
+```
+
+**Example:**
+
+```js
+{% image_compare 
+  "example-image_ORIGINAL.jpg"
+  "example-image_PRESET.jpg"
+  "Lightroom Preset" 
+%}
+```
+
+**Output:**
+
+```html
+<div id="image-compare-1yrasq">
+  <img class="image-compare image-original" 
+       src="/post/my-post/example-image_ORIGINAL.jpg" alt="" />
+  <img class="image-compare image-modified" 
+       src="/post/my-post/example-image_PRESET.jpg" alt="" />
+</div>
+<script>
+  var themeColor = "#ffffff";
+  if (localStorage.getItem("theme") === 'dark') {
+    themeColor = "#222222"
+  }
+  new ImageCompare(document.getElementById("image-compare-1yrasq"),
+  {
+    controlColor: themeColor,
+    controlShadow: false,
+    verticalMode: false,
+    showLabels: true,
+    labelOptions: {
+      before: 'Original',
+      after: 'Lightroom Preset',
+      onHover: true,
+    }
+  }).mount();
+</script>
+```
+
+![Image Compare Example](assets/tag-image-compare-example.png)
+
+**VS Code Snippet:**
+
+```json
+"hexo.kiko-io.image_compare": {
+  "scope": "markdown",
+  "prefix": "hexo.kiko-io.image_compare",
+  "body": [
+    "{% image_compare \"${1:imgFileOriginal}\" \"${2:imgFileModified}\" \"${3:modDesc}\" \"${4:orientation}\" %}"
+  ],
+  "description": "Insert kiko.io's image_compare"
+}
+```
+
+![-](assets/divider.png)
+
+## Image Link
+
+Renders an image including ALT attribute within a link.
+
+**Files:**
+
+- [tag-image-link.js](https://github.com/kristofzerbe/hexo-tag-plugins/blob/main/tag-image-link.js)
+  
+**Syntax:**  
+
+```txt
+{% image_link "assetImg" "url" "alt" %}
+```
+
+**Example:**
+
+```js
+{% image_link "kiko-io-screenshot.png" "http://kiko.io" "Blog kiko.io" %}
+```
+
+**Output:**
+
+```html
+<a href="http://kiko.io">
+  <img src="kiko-io-screenshot.png" alt="Blog kiko.io">
+</a>
+```
+
+**VS Code Snippet:**
+
+```json
+"hexo.kiko-io.image_link": {
+  "scope": "markdown",
+  "prefix": "hexo.kiko-io.image_link",
+  "body": [
+    "{% image_link \"${1:assetImg}\" \"${2:url}\" \"${3:alt}\" %}"
+  ],
+  "description": "Insert kiko.io's image_link"
+}
+```
+
+![-](assets/divider.png)
+
+## Image Slide
+
+Shows multiple images within a slider with the aid of the JS library [Tiny Slider](https://github.com/ganlanyuan/tiny-slider).
+
+**Files:**
+
+- [tag-XXX.js](https://github.com/kristofzerbe/hexo-tag-plugins/blob/main/tag-XXX.js)
+  
+**Prequisites:**
+
+As this tag plugin relies on an external JS library, the files ``tiny-slider.js`` and ``tiny-slider.css`` (or its minified versions) must be loaded in the header of the web page.
+
+The CSS file doesn't include styles for the ``.tns-nav`` and its controls, but you can use the following to extend the original CSS:
+
+```css
+.tns-nav {
+    text-align: center;
+    margin: 10px 0;
+}
+.tns-nav > [aria-controls] {
+    width: 12px;
+    height: 12px;
+    padding: 0;
+    margin: 0 5px;
+    border-radius: 50%;
+    background: #ddd;
+    border: 0;
+}
+.tns-nav > .tns-nav-active {
+    background: #999;
+}
+```
+
+**Syntax:**  
+
+```txt
+{% image_slide ..."assetImg|title" %}
+```
+
+**Example:**
+
+```js
+{% image_slide
+  "example-image_ORIGINAL.jpg|Original"
+  "example-image_PRESET.jpg|Lightroom Preset"
+%}
+```
+
+**Output:**
+
+```html
+<div class="image-slider" id="image-slide-w7jgxk">
+  <div>
+    <img src="/post/my-post/example-image_ORIGINAL.jpg" alt="Original" />
+  </div>
+  <div>
+    <img src="/post/my-post/example-image_PRESET.jpg" alt="Lightroom Preset" />
+  </div>
+</div>
+<script>
+  tns({
+    container: "#image-slide-w7jgxk",
+    items: 1,
+    slideBy: "page",
+    controls: false,
+    nav: true
+  });
+</script>
+```
+
+![Image Slide Example](assets/image-slide-example.png)
+
+**VS Code Snippet:**
+
+```json
+"hexo.kiko-io.image_slide": {
+  "scope": "markdown",
+  "prefix": "hexo.kiko-io.image_slide",
+  "body": [
+    "{% image_slide ${1:...\"assetImg|title\"} %}"
+  ],
+  "description": "Insert kiko.io's image_slide"
+}
+```
+
+![-](assets/divider.png)
+
+## Indiepen
+
+Embedding a "local" pen (`index.html`, `main.js` and `styles.css` stored in an asset subfolder) via [Indiepen](https://indiepen.tech).
+
+**Files:**
+
+- [tag-indiepen.js](https://github.com/kristofzerbe/hexo-tag-plugins/blob/main/tag-indiepen.js)
+  
+**Prequisites:**
+
+You need following configuration section in your `_config.yml`:
+
+```yml
+# Indiepen Defaults
+indiepen:
+  default_tab: "result"
+  height: 450
+```
+
+**Syntax:**  
+
+```txt
+{% indiepen "subfolder" [height=450] defaultTab:(result,html,css,js) %}
+```
+
+**Example:**
+
+```js
+{% indiepen "my-pen" 300 html %}
+```
+
+**Output:**
+
+```html
+<iframe class="indiepen"
+        src="https://indiepen.tech/embed/?url=https%3A%2F%2Fmy-blog.com%2Fpost%2Fmy-post%2Fmy-pen&tab=html"
+        style="width: 100%; overflow: hidden; display: block; border: 0;"
+        title="Indiepen Embed"
+        loading="lazy" 
+        width="100%" 
+        height="300">
+</iframe>
+```
+
+![Indiepen Example](assets/tag-indiepen-example.png)
+
+**VS Code Snippet:**
+
+```json
+"hexo.kiko-io.indiepen": {
+  "scope": "markdown",
+  "prefix": "hexo.kiko-io.indiepen",
+  "body": [
+    "{% indiepen \"${1:subfolder}\" ${2:height} ${3|result,html,css,js|} %}"
+  ],
+  "description": "Insert kiko.io's indiepen"
+}
+```
+
+![-](assets/divider.png)
+
+## More Info
+
+Renders a list of related, informative links regarding a post.
+
+**Files:**
+
+- [tag-moreinfo.js](https://github.com/kristofzerbe/hexo-tag-plugins/blob/main/tag-moreinfo.js)
+
+**Syntax:**  
+
+```txt
+{% moreinfo '{ "list": [
+  [ "publisher", "title", "url" ]
+]}' %}
+```
+
+**Example:**
+
+```js
+{% moreinfo '{ "list": [
+  [ "Wikipedia", "Markdown",
+  "https://en.wikipedia.org/wiki/Markdown" ],
+  [ "Markdown Guide", "Basic Syntax",
+  "https://www.markdownguide.org/basic-syntax/" ],
+  [ "Daring Fireball", "Markdown: Syntax",
+  "https://daringfireball.net/projects/markdown/syntax" ]
+]}' %}
+```
+
+**Output:**
+
+```html
+<ul class="moreinfo-list">
+  <li>Wikipedia: <a href="https://en.wikipedia.org/wiki/Markdown">Markdown</a></li>
+  <li>Markdown Guide: <a href="https://www.markdownguide.org/basic-syntax/">Basic Syntax</a></li>
+  <li>Daring Fireball: <a href="https://daringfireball.net/projects/markdown/syntax">Markdown: Syntax</a></li>
+</ul>
+```
+
+![More Info Example](assets/tag-more-info-example.png)
+
+**VS Code Snippet:**
+
+```json
+"hexo.kiko-io.moreinfo": {
+  "scope": "markdown",
+  "prefix": "hexo.kiko-io.moreinfo",
+  "body": [
+    "{% moreinfo '{ \"list\": [",
+    "  [ ${1:\"publisher\"}, ${2:\"title\"},",
+    "  ${3:\"url\"} ]$0",
+    "]}' %}"
+  ],
+  "description": "Insert kiko.io's moreinfo"
+}
+```
+
+To insert one more item to the list, use:
+
+```json
+"hexo.kiko-io.moreinfo.item": {
+  "scope": "markdown",
+  "prefix": "hexo.kiko-io.moreinfo.item",
+  "body": [
+    "[ ${1:\"publisher\"}, ${2:\"title\"},", 
+    "${3:\"url\"} ]$0"
+  ],
+  "description": "Insert kiko.io's moreinfo item"
 }
 ```
 
