@@ -645,7 +645,7 @@ You need to have installed the [**Axios** package](https://www.npmjs.com/package
 | --- | --- | --- | --- |
 | 1 | ``user`` | | Name of the GitHub user |
 | 2 | ``repo`` | | Name of the GitHub repo |
-| 3 | ``cardWidth`` | "400px" | Width of the card; minimum 300px |
+| 3 | ``cardWidth`` | "400px" | Maximum width of the card; Minimum is 300px |
 | 4 | ``userheight`` | "120px" | Height of the upper user panel |
 | 5 | ``avatarSize`` | "90px" | Size of the avatar image as CSS value |
 

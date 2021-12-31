@@ -6,7 +6,7 @@
     --gh-link-color: #0969da;
 
     position: relative;
-    width: var(--gh-card-width);
+    max-width: var(--gh-card-width);
     min-width: 300px;
     font-family: "Segoe UI", Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
