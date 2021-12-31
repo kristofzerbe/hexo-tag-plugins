@@ -2,7 +2,7 @@
   Indiepen Tag
 
   Syntax:
-  {% indiepen "subfolder" [height=450] defaultTab:(result,html,css,js) %}
+  {% indiepen "subfolder" [height] [defaultTab:(result,html,css,js)] %}
 */
 
 hexo.extend.tag.register("indiepen", function(args, content){

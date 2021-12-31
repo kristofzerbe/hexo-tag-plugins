@@ -2,7 +2,7 @@
   CodeSandbox Tag
 
   Syntax:
-  {% codesandbox "slugHash" "title" [height] [width] %}
+  {% codesandbox "slugHash" "title" [height] ["width"] %}
 */
 
 hexo.extend.tag.register("codesandbox", function(args, content){

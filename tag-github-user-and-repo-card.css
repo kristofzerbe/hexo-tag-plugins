@@ -1,0 +1,212 @@
+.gh-card {
+    --gh-back-color: #24292f;
+    --gh-user-color: #fff;
+    --gh-border-color: #ddd;
+    --gh-text-color: #57606a;
+    --gh-link-color: #0969da;
+
+    position: relative;
+    width: var(--gh-card-width);
+    min-width: 300px;
+    font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+.gh-card a {
+    text-decoration: none !important;
+}
+.gh-card .gh-logo,
+.gh-card .gh-link {
+    position: absolute;
+    top: 15px;
+}
+.gh-card .gh-logo {
+    left: 15px;
+}
+.gh-card .gh-logo svg {
+    width: 20px;
+}
+.gh-card .gh-link {
+    right: 15px;
+}
+.gh-card .gh-link svg {
+    width: 18px;
+    opacity: 0.5;
+}
+.gh-card img.gh-avatar {
+    position: absolute;
+    left: 50%;
+    top: calc(var(--gh-user-height) - calc(var(--gh-avatar-size)/4));
+    transform: translate(-50%, -25%);
+    width: var(--gh-avatar-size);
+    height: var(--gh-avatar-size);
+    box-sizing: border-box;
+    border: 3px #fff solid;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: -o-crisp-edges;
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+    border-radius: 50%;
+}
+.gh-card .gh-user {
+    display: grid;
+    height: var(--gh-user-height);
+    grid-template-columns: 1fr var(--gh-avatar-size) 1fr;
+    grid-template-rows: auto calc(var(--gh-avatar-size) / 2);
+    gap: 0px 0px; 
+    grid-template-areas: 
+        "account account account"
+        "repos logo followers"; 
+    border-radius: 5px 5px 0 0;
+    background-color: var(--gh-back-color);
+    color: var(--gh-user-color) !important;
+}
+.gh-card .gh-user .gh-account {
+    grid-area: account;
+    padding-top: 5px
+}
+.gh-card .gh-user .gh-account h1,
+.gh-card .gh-user .gh-account h2 {
+    margin: 0;
+    width: 100%;
+    align-self: center;
+    text-align: center;
+}
+.gh-card .gh-user .gh-account h1 {
+    font-size: 22px;
+    font-weight: 400;
+    padding: 5px 0 0;
+    width: calc(100% - 100px);
+    margin: 0 auto;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.gh-card .gh-user .gh-account h2 {
+    font-size: 14px;
+    font-weight: 100;
+    opacity: 0.33;
+}
+.gh-card .gh-user .gh-info {
+    text-align: center;
+    opacity: 0.5;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+.gh-card .gh-user .gh-info strong {
+    display: block;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 16px;
+}
+.gh-card .gh-user .gh-info span {
+    opacity: 0.5;
+    font-size: 10px;
+}
+.gh-card .gh-user .gh-info.gh-repos {
+    grid-area: repos;
+}
+.gh-card .gh-user .gh-info.gh-followers {
+    grid-area: followers;
+}
+.gh-card .gh-repo {
+    border: 1px var(--gh-border-color) solid;
+    border-top: none;
+    border-radius: 0 0 6px 6px;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    display: grid; 
+    grid-template-columns: 1fr 1fr calc(var(--gh-avatar-size) + 20px) 1fr 1fr; 
+    grid-template-rows: calc(var(--gh-avatar-size) / 2) 1fr auto; 
+    gap: 0px 0px; 
+    grid-template-areas: 
+        "stars watchers . forks issues"
+        "desc desc desc desc desc"; 
+}
+.gh-card .gh-repo .gh-meta {
+    display: inline-block;
+    font-size: 14px;
+    color: var(--gh-back-color) !important;
+    padding: 5px 0;
+}
+.gh-card .gh-repo .gh-meta svg,
+.gh-card .gh-repo .gh-desc svg {
+    display: inline-block;
+    width: 16px;
+    margin-right: 3px;
+    vertical-align: text-bottom;
+    color: var(--gh-text-color) !important;
+    fill: currentColor;
+}
+.gh-card .gh-repo .gh-meta.gh-stars {
+    grid-area: stars;
+    text-align: left;
+}
+.gh-card .gh-repo .gh-meta.gh-watchers {
+    grid-area: watchers;
+    text-align: left;
+}
+.gh-card .gh-repo .gh-meta.gh-forks {
+    grid-area: forks;
+    text-align: right;
+}
+.gh-card .gh-repo .gh-meta.gh-issues {
+    grid-area: issues;
+    text-align: right;
+}
+.gh-card .gh-repo .gh-desc {
+    grid-area: desc;
+    font-size: 14px;
+}
+.gh-card .gh-repo .gh-desc h2 {
+    grid-area: title;
+    font-size: 20px;
+    font-weight: 600;
+    margin: 0;
+}
+.gh-card .gh-repo .gh-desc h2 svg {
+    width: 16px;
+    margin-right: 5px;
+    vertical-align: middle;
+}
+.gh-card .gh-repo .gh-desc h2 a {
+    color: var(--gh-link-color);
+}
+.gh-card .gh-repo .gh-desc h2 a:hover {
+    text-decoration: underline;
+}
+.gh-card .gh-repo .gh-desc p {
+    margin: 15px 0;
+}
+.gh-card .gh-repo .gh-desc p:last-child {
+    margin-bottom: 5px;
+}
+.gh-card .gh-repo .gh-desc .gh-language-bar {
+    display: flex;
+    height: 8px;
+    border-radius: 4px;
+    outline: 1px solid transparent;
+    overflow: hidden;
+}
+.gh-card .gh-repo .gh-desc .gh-language-bar span {
+    outline: 2px solid transparent;
+}
+.gh-card .gh-repo .gh-desc .gh-language-bar span:not(:last-child) {
+    margin-right: 1px;
+}
+.gh-card .gh-repo .gh-desc .gh-language-list {
+    list-style: none !important;
+    padding-left: 0;
+    margin: 5px 0 0 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+.gh-card .gh-repo .gh-desc .gh-language-list li {
+    display: inline-block;
+    font-size: 12px;
+    color: var(--gh-text-color);
+    margin: 0 10px 0 0;
+    padding: 0;
+}
+.gh-card .gh-repo .gh-desc .gh-language-list li strong {
+    margin-right: 3px;
+}

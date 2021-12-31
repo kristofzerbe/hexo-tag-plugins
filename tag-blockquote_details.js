@@ -2,7 +2,7 @@
   Details Blockquote Tag
 
   Syntax
-  {% blockquote_details [summary] [cite] [citeUrl] %}
+  {% blockquote_details "summary" "cite" ["citeUrl"] %}
     quote
   {% endblockquote_details %}
 

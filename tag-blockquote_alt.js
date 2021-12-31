@@ -2,7 +2,7 @@
   Alternative Blockquote Tag
 
   Syntax
-  {% blockquote_alt cite [citeUrl] %}
+  {% blockquote_alt "cite" ["citeUrl"] %}
     quote
   {% endblockquote_alt %}
 

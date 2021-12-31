@@ -41,6 +41,8 @@ Every tag plugin includes a description in the header how to use it. The syntax 
 - [Codepen](#codepen)
 - [CodeSandbox](#codesandbox)
 - [Download Link](#download-link)
+- [Github Readme](#github-readme)
+- [GitHub User & Repo Card](#github-user-repo-card)
 - [Image Compare](#image-compare)
 - [Image Link](#image-link)
 - [Image Slide](#image-slide)
@@ -63,7 +65,14 @@ A simple anchor element as ``A``- or ``HR``-Tag as jump target for example from 
 {% anchor "anchorId" elementType:(A,HR) %}``
 ```
 
-**Example:**
+**Parameters:**
+
+| No | Parameter | optional/default | Description |
+| --- | --- | --- | --- |
+| 1 | ``anchorId`` | - | String to define the anchor id |
+| 2|  ``elementType`` | - | Type of tag to render; select out of ``A`` or  ``HR`` |
+
+**Usage Example:**
 
 ```js
 {% anchor "my-anchor" HR  %}
@@ -101,10 +110,16 @@ Creates an overview of all anchors in the content with jump links.
 **Syntax:**  
 
 ```txt
-{% anchorlist ..."title|anchorId" %}``
+{% anchorlist ..."title|anchorId" %}
 ```
 
-**Example:**
+**Parameters:**
+
+| No | Parameter | optional/default | Description |
+| --- | --- | --- | --- |
+| 1 | ``..."title\|anchorId"`` | - | List of pipe separated items with referencing title and anchor id |
+
+**Usage Example:**
 
 ```js
 {% anchorlist
@@ -164,7 +179,15 @@ content
 {% endalertbox %}``
 ```
 
-**Example:**
+**Parameters:**
+
+| No | Parameter | optional/default | Description |
+| --- | --- | --- | --- |
+| 1 | ``alertType`` | - | Type of the alert (icon and color); select out of ``exclamation``, ``question``, ``warning``, ``info``, ``success`` or ``note`` |
+
+``content`` is not a parameter, but Markdown to render.
+
+**Usage Example:**
 
 ```js
 {% alertbox warning %}
@@ -212,12 +235,19 @@ An alternative blockquote tag plugin for quotes with citator and reference url.
 **Syntax:**  
 
 ```txt
-{% blockquote_alt cite [citeUrl] %}
+{% blockquote_alt "cite" ["citeUrl"] %}
 quote
 {% endblockquote_alt %}
 ```
 
-**Example:**
+**Parameters:**
+
+| No | Parameter | optional/default | Description |
+| --- | --- | --- | --- |
+| 1 | ``cite`` | | Author of the quote |
+| 2 | ``citeUrl`` | yes | Url to the quote |
+
+**Usage Example:**
 
 ```js
 {% blockquote_alt "Anonymous" "https://en.wikipedia.org/wiki/Lorem_ipsum" %}
@@ -249,7 +279,7 @@ See a live example at [https://kiko.io/post/Hexo-Tag-Plugin-Collection/#blockquo
   "scope": "markdown",
   "prefix": "hexo.kiko-io.blockquote",
   "body": [
-    "{% blockquote_alt \"${1:cite}\" \"${2:citeUrl}\" %}",
+    "{% blockquote_alt \"${1:cite}\" [\"${2:citeUrl}\"] %}",
     "${3:content}",
     "{% endblockquote_alt %}"
   ],
@@ -270,13 +300,23 @@ Blockquote including summary, citator and reference url, wrapped in a ``details`
 **Syntax:**  
 
 ```txt
-{% blockquote_details [summary] [cite] [citeUrl] %}
+{% blockquote_details "summary" "cite" ["citeUrl"] %}
 quote
 {% endblockquote_details %}
 
 ```
 
-**Example:**
+**Parameters:**
+
+| No | Parameter | optional/default | Description |
+| --- | --- | --- | --- |
+| 1 | ``summary`` | - | Summary of the quote |
+| 2 | ``cite`` | - | Author of the quote |
+| 3 | ``citeUrl`` | yes | Url to the quote |
+
+``quote`` is not a parameter, but Markdown to render.
+
+**Usage Example:**
 
 ```js
 {% blockquote_details "Lorem ipsum" "Anonymous" "https://en.wikipedia.org/wiki/Lorem_ipsum" %}
@@ -311,7 +351,7 @@ See a live example at [https://kiko.io/post/Hexo-Tag-Plugin-Collection/#blockquo
   "scope": "markdown",
   "prefix": "hexo.kiko-io.blockquote_details",
   "body": [
-    "{% blockquote_details \"${1:summary}\" \"${2:cite}\" \"${3:citeUrl}\" %}",
+    "{% blockquote_details \"${1:summary}\" \"${2:cite}\" [\"${3:citeUrl}\"] %}",
     "${4:quote}",
     "{% endblockquote_details %}"
   ],
@@ -345,10 +385,20 @@ codepen:
 **Syntax:**  
 
 ```txt
-{% codepen "slugHash" "title" defaultTab:(html,js,css) [height] [width] %}
+{% codepen "slugHash" "title" [defaultTab:(html,js,css)] [height] ["width"] %}
 ```
 
-**Example:**
+**Parameters:**
+
+| No | Parameter | optional/default | Description |
+| --- | --- | --- | --- |
+| 1 | ``slugHash`` | - | Codepens SlugHash |
+| 2 | ``title`` | - | Title |
+| 3 | ``defaultTab`` | js | Default tab to show ; select out of ``html``, ``js`` or ``css`` |
+| 4 | ``height`` | 300  | Height as number |
+| 5 | ``width`` | "100%" | Width as CSS value |
+
+**Usage Example:**
 
 ```js
 {% codepen "MWEbERg" "Lorem Ipsum" html %}
@@ -383,7 +433,7 @@ See a live example at [https://kiko.io/post/Hexo-Tag-Plugin-Collection/#codepen]
   "scope": "markdown",
   "prefix": "hexo.kiko-io.codepen",
   "body": [
-    "{% codepen \"${1:slugHash}\" \"${2:title}\" ${3|html,js,css|} ${4:height} ${5:width} %}"
+    "{% codepen \"${1:slugHash}\" \"${2:title}\" [${3|html,js,css|}] [${4:height}] [\"${5:width}\"] %}"
   ],
   "description": "Insert kiko.io's codepen"
 }
@@ -402,10 +452,19 @@ Embedding a sandbox from [CodeSandbox](https://codesandbox.io/).
 **Syntax:**  
 
 ```txt
-{% codesandbox "slugHash" "title" [height] [width] %}
+{% codesandbox "slugHash" "title" [height] ["width"] %}
 ```
 
-**Example:**
+**Parameters:**
+
+| No | Parameter | optional/default | Description |
+| --- | --- | --- | --- |
+| 1 | ``slugHash`` | - | Sandbox' SlugHash |
+| 2 | ``title`` | - | Title |
+| 3 | ``height`` | 500  | Height as number |
+| 4 | ``width`` | "100%" | Width as CSS value |
+
+**Usage Example:**
 
 ```js
 {% codesandbox "cool-shamir-de613" "Lorem Ipsum" 300 %}
@@ -433,12 +492,11 @@ See a live example at [https://kiko.io/post/Hexo-Tag-Plugin-Collection/#codesand
   "scope": "markdown",
   "prefix": "hexo.kiko-io.codesandbox",
   "body": [
-    "{% codesandbox ${1:\"slugHash}\" \"${2:title}\" ${3:height} ${4:width} %}"
+    "{% codesandbox ${1:\"slugHash}\" \"${2:title}\" [${3:height}] [\"${4:width}\"] %}"
   ],
   "description": "Insert kiko.io's codesandbox"
 }
 ```
-
 
 ![-](assets/divider.png)
 
@@ -456,7 +514,14 @@ Button link for downloading an asset file, with additional caption ("Download &l
 {% download_link "assetFile" ["additionalCaption"] %}
 ```
 
-**Example:**
+**Parameters:**
+
+| No | Parameter | optional/default | Description |
+| --- | --- | --- | --- |
+| 1 | ``assetFile`` | | Asset file name to download |
+| 2 | ``additionalCaption`` | yes | Additional caption between *"Download "* and file name |
+
+**Usage Example:**
 
 ```js
 {% download_link "example-image_ORIGINAL.jpg" "Photo" %}
@@ -491,6 +556,130 @@ See a live example at [https://kiko.io/post/Hexo-Tag-Plugin-Collection/#download
 
 ![-](assets/divider.png)
 
+## Github Readme
+
+Gets the README file of a Github repo and renders its Markdown as HTML in a ``detail`` tag.
+
+**Files:**
+
+- [tag-github-readme.js](https://github.com/kristofzerbe/hexo-tag-plugins/blob/main/tag-github-readme.js)
+  
+**Prequisites:**
+
+You need to have installed the [**Axios** package](https://www.npmjs.com/package/axios) in your project.
+
+The HTML output has no styles, therefore you need some in your CSS for ``.github-readme``.
+
+**Syntax:**  
+
+```txt
+{% github_readme "user" "repo" ["summary"] %}
+```
+
+**Parameters:**
+
+| No | Parameter | optional/default | Description |
+| --- | --- | --- | --- |
+| 1 | ``user`` | | Name of the GitHub user |
+| 2 | ``repo`` | | Name of the GitHub repo |
+| 3 | ``summary`` | "Project README on Github" | Caption of the DETAILS element |
+
+**Usage Example:**
+
+```js
+{% github_readme "kristofzerbe" "hexo-tag-plugins" %}
+```
+
+**Output:**
+
+```html
+<details class="github-readme">
+  <summary>Project README on Github</summary>
+  <div>
+    <!-- Content of the README file converted to HTML -->
+  </div>
+</details>
+```
+
+![Github Readme Example](assets/tag-github-readme-example.png)
+
+**VS Code Snippet:**
+
+```json
+"hexo.kiko-io.github_readme": {
+  "scope": "markdown",
+  "prefix": "hexo.kiko-io.github_readme",
+  "body": [
+    "{% github_readme \"${1:user}\" \"${2:repo}\" \"${3:[summary]}\" %}"
+  ],
+  "description": "Insert kiko.io's github_readme"
+}
+```
+
+See a live example at [https://kiko.io/post/GitHub-Tag-Plugins-for-Hexo/#readme](https://kiko.io/post/GitHub-Tag-Plugins-for-Hexo/#readme)
+
+![-](assets/divider.png)
+
+## GitHub User & Repo Card
+
+Renders a card-like info panel, with full information about a GitHub repo and its creator, the GitHub user.
+
+**Files:**
+
+- [tag-github-user-and-repo-card.js](https://github.com/kristofzerbe/hexo-tag-plugins/blob/main/tag-github-user-and-repo-card.js)
+- [tag-github-user-and-repo-card.css](https://github.com/kristofzerbe/hexo-tag-plugins/blob/main/tag-github-user-and-repo-card.css)
+  
+**Prequisites:**
+
+You need to have installed the [**Axios** package](https://www.npmjs.com/package/axios) in your project.
+
+**Syntax:**  
+
+```txt
+{% github_user_and_repo_card "user" "repo" ["cardWidth"] ["userheight"] ["avatarSize"] %}
+```
+
+**Parameters:**
+
+| No | Parameter | optional/default | Description |
+| --- | --- | --- | --- |
+| 1 | ``user`` | | Name of the GitHub user |
+| 2 | ``repo`` | | Name of the GitHub repo |
+| 3 | ``cardWidth`` | "400px" | Width of the card; minimum 300px |
+| 4 | ``userheight`` | "120px" | Height of the upper user panel |
+| 5 | ``avatarSize`` | "90px" | Size of the avatar image as CSS value |
+
+**Usage Example:**
+
+```js
+{% github_user_and_repo_card "kristofzerbe" "hexo-tag-plugins" "500px" %}
+```
+
+**Output:**
+
+```html
+<!-- see tag-github-user-and-repo-card.html -->
+```
+
+![GitHub User & Repo Card Example](assets/tag-github-user-and-repo-card-example.png)
+
+**VS Code Snippet:**
+
+```json
+"hexo.kiko-io.github_user_and_repo_card": {
+  "scope": "markdown",
+  "prefix": "hexo.kiko-io.github_user_and_repo_card",
+  "body": [
+    "{% github_user_and_repo_card \"${1:user}\" \"${2:repo}\" \"${3:[cardWidth]}\" \"${4:[userhight]}\" \"${5:[avatarSize]}\" %}"
+  ],
+  "description": "Insert kiko.io's github_user_and_repo_card"
+}
+```
+
+See a live example at [https://kiko.io/post/GitHub-Tag-Plugins-for-Hexo/#user-and-repo-card](https://kiko.io/post/GitHub-Tag-Plugins-for-Hexo/#user-and-repo-card)
+
+![-](assets/divider.png)
+
 ## Image Compare
 
 Comparing two asset images side-by-side with the aid of the JS library [Image Compare Viewer](https://image-compare-viewer.netlify.app/).
@@ -514,7 +703,16 @@ As this tag plugin relies on an external JS library, the files ``image-compare-v
 %}
 ```
 
-**Example:**
+**Parameters:**
+
+| No | Parameter | optional/default | Description |
+| --- | --- | --- | --- |
+| 1 | ``imgFileOriginal`` | - | Original asset image file name |
+| 2 | ``imgFileModified`` | - | Modified asset image file name |
+| 3 | ``descriptionModified`` | - | Description |
+| 4 | ``orientation`` | null | Vertical orientation Mode; set ``vertical`` to select |
+
+**Usage Example:**
 
 ```js
 {% image_compare 
@@ -564,7 +762,7 @@ See a live example at [https://kiko.io/post/Hexo-Tag-Plugin-Collection/#image-co
   "scope": "markdown",
   "prefix": "hexo.kiko-io.image_compare",
   "body": [
-    "{% image_compare \"${1:imgFileOriginal}\" \"${2:imgFileModified}\" \"${3:modDesc}\" \"${4:orientation}\" %}"
+    "{% image_compare \"${1:imgFileOriginal}\" \"${2:imgFileModified}\" \"${3:modDesc}\" [\"${4|vertical|}\"] %}"
   ],
   "description": "Insert kiko.io's image_compare"
 }
@@ -586,7 +784,15 @@ Renders an image including ALT attribute within a link.
 {% image_link "assetImg" "url" "alt" %}
 ```
 
-**Example:**
+**Parameters:**
+
+| No | Parameter | optional/default | Description |
+| --- | --- | --- | --- |
+| 1 | ``assetImg`` | - | Asset image file name |
+| 2 | ``url`` | - | Url to link to |
+| 3 | ``alt`` | - | Alternate text |
+
+**Usage Example:**
 
 ```js
 {% image_link "kiko-io-screenshot.png" "http://kiko.io" "Blog kiko.io" %}
@@ -621,7 +827,7 @@ Shows multiple images within a slider with the aid of the JS library [Tiny Slide
 
 **Files:**
 
-- [tag-XXX.js](https://github.com/kristofzerbe/hexo-tag-plugins/blob/main/tag-XXX.js)
+- [tag-image-slide.js](https://github.com/kristofzerbe/hexo-tag-plugins/blob/main/tag-image-slide.js)
   
 **Prequisites:**
 
@@ -654,7 +860,13 @@ The CSS file doesn't include styles for the ``.tns-nav`` and its controls, but y
 {% image_slide ..."assetImg|title" %}
 ```
 
-**Example:**
+**Parameters:**
+
+| No | Parameter | optional/default | Description |
+| --- | --- | --- | --- |
+| 1 | ``..."assetImg\|title"`` | | List of pipe separated items with asset image file and title |
+
+**Usage Example:**
 
 ```js
 {% image_slide
@@ -726,10 +938,18 @@ indiepen:
 **Syntax:**  
 
 ```txt
-{% indiepen "subfolder" [height=450] defaultTab:(result,html,css,js) %}
+{% indiepen "subfolder" [height] [defaultTab:(result,html,css,js)] %}
 ```
 
-**Example:**
+**Parameters:**
+
+| No | Parameter | optional/default | Description |
+| --- | --- | --- | --- |
+| 1 | ``subfolder`` | | Asset subfolder with indiepen files |
+| 2 | ``defaultTab`` | result | Default tab to show ; select out of ``result``, ``html``, ``js`` or ``css`` |
+| 3 | ``height`` | 450  | Height as number |
+
+**Usage Example:**
 
 ```js
 {% indiepen "my-pen" 300 html %}
@@ -783,7 +1003,7 @@ Renders a list of related, informative links regarding a post.
 ]}' %}
 ```
 
-**Example:**
+**Usage Example:**
 
 ```js
 {% moreinfo '{ "list": [
@@ -843,6 +1063,11 @@ To insert one more item to the list, use:
 ![-](assets/divider.png)
 
 ## History
+
+**2021-12-29**
+- Description of parameters added
+- **Github Readme** added
+- **GitHub User & Repo Card** added
 
 **2021-12-12** 
 - Initial Commit
