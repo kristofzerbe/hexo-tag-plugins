@@ -42,7 +42,7 @@ Every tag plugin includes a description in the header how to use it. The syntax 
 - [CodeSandbox](#codesandbox)
 - [Download Link](#download-link)
 - [Github Readme](#github-readme)
-- [GitHub User & Repo Card](#github-user-repo-card)
+- [GitHub User & Repo Card](#github-user--repo-card)
 - [Image Compare](#image-compare)
 - [Image Link](#image-link)
 - [Image Slide](#image-slide)
