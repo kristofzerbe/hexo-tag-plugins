@@ -1,5 +1,4 @@
-[![GitHub package.json version](https://img.shields.io/github/package-json/v/kristofzerbe/hexo-tag-plugins?label=version&style=flat-square)](https://github.com/kristofzerbe/hexo-tag-plugins/blob/main/package.json)
-[![issues](https://img.shields.io/github/issues/kristofzerbe/hexo-tag-plugins?label=github%20issues&style=flat-square)](https://github.com/kristofzerbe/hexo-tag-plugins/issues)
+[![GitHub package.json version](https://img.shields.io/github/package-json/v/kristofzerbe/hexo-tag-plugins?labe[![issues](https://img.shields.io/github/issues/kristofzerbe/hexo-tag-plugins?label=github%20issues&style=flat-square)](https://github.com/kristofzerbe/hexo-tag-plugins/issues)
 
 # hexo-tag-plugins
 
