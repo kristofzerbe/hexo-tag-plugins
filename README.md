@@ -400,7 +400,7 @@ codepen:
 **Usage Example:**
 
 ```js
-{% codepen "MWEbERg" "Lorem Ipsum" html %}
+{% codepen "abjJNYE" "Lorem Ipsum" html %}
 ```
 
 **Output:**
@@ -408,9 +408,9 @@ codepen:
 ```html
 <iframe 
   height="400" 
-  id="codepen-MWEbERg" 
+  id="codepen-abjJNYE" 
   class="codepen" 
-  src="https://codepen.io/kristofzerbe/embed/MWEbERg?height=400&amp;default-tab=html,result&amp;theme-id=light" 
+  src="https://codepen.io/kristofzerbe/embed/abjJNYE?height=400&amp;default-tab=html,result&amp;theme-id=light" 
   style="width: 100%;" 
   scrolling="no" 
   title="Codepen: Lorem Ipsum" 
