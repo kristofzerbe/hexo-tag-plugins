@@ -47,6 +47,7 @@ Every tag plugin includes a description in the header how to use it. The syntax 
 - [Image Slide](#image-slide)
 - [Indiepen](#indiepen)
 - [More Info](#more-info)
+- [Image Masonry](#image-masonry)
 
 ![-](assets/divider.png)
 
@@ -1056,6 +1057,100 @@ To insert one more item to the list, use:
     "${3:\"url\"} ]$0"
   ],
   "description": "Insert kiko.io's moreinfo item"
+}
+```
+
+![-](assets/divider.png)
+
+## Image Masonry
+
+Shows multiple images in a masonry grid with the aid of the JS library [Macy.js](http://macyjs.com/).
+
+**Files:**
+
+- [tag-image-masonry.js](https://github.com/kristofzerbe/hexo-tag-plugins/blob/main/tag-image-masonry.js)
+  
+**Prequisites:**
+
+As this tag plugin relies on an external JS library, the library file ``macy.js`` must be loaded in the header of the web page.
+
+**Syntax:**  
+
+```txt
+{% image_masonry ..."assetImg|title" %}
+```
+
+**Parameters:**
+
+| No | Parameter | optional/default | Description |
+| --- | --- | --- | --- |
+| 1 | ``..."assetImg\|title"`` | | List of pipe separated items with asset image file and title |
+
+**Usage Example:**
+
+```js
+{% image_masonry
+  "example-image-1.jpg|First Image"
+  "example-image-2.jpg|Second Image"
+  "example-image-3.jpg|Third Image"
+  "example-image-4.jpg|Fourth Image"
+  "example-image-5.jpg|Fifth Image"
+  "example-image-6.jpg|Sixth Image"
+%}
+```
+
+**Output:**
+
+```html
+<div id="#image-masonry-z8katm">
+  <div><img src="example-image-1.jpg" alt="First Image"></div>
+  <div><img src="example-image-2.jpg" alt="Second Image"></div>
+  <div><img src="example-image-3.jpg" alt="Third Image"></div>
+  <div><img src="example-image-4.jpg" alt="Fourth Image"></div>
+  <div><img src="example-image-5.jpg" alt="Fifth Image"></div>
+  <div><img src="example-image-7.jpg" alt="Sixth Image"></div>
+</div>  
+<script>
+  let macy = new Macy({
+    container: "#image-masonry-z8katm",
+    trueOrder: false,
+    waitForImages: false,
+    useOwnImageLoader: false,
+    debug: true,
+    mobileFirst: true,
+    columns: 2,
+    margin: {
+      y: 6,
+      x: 6
+    },
+    breakAt: {
+      1024: {
+        margin: {
+          x: 8,
+          y: 8
+        },
+        columns: 4
+      },
+      768: 3
+    }
+  });
+</script>
+```
+
+![Image Masonry Example](assets/tag-masonry-slide-example.png) <-----!
+
+See a live example at [https://kiko.io/post/Image-Masonry-Tag-Plugin-for-Hexo/](https://kiko.io/post/Image-Masonry-Tag-Plugin-for-Hexo/)
+
+**VS Code Snippet:**
+
+```json
+"hexo.kiko-io.image_masonry": {
+  "scope": "markdown",
+  "prefix": "hexo.kiko-io.image_masonry",
+  "body": [
+    "{% image_masonry ${1:...\"assetImg|title\"} %}"
+  ],
+  "description": "Insert kiko.io's image_masonry"
 }
 ```
 
