@@ -1096,6 +1096,8 @@ As this tag plugin relies on an external JS library, the library file ``macy.js`
   "example-image-4.jpg|Fourth Image"
   "example-image-5.jpg|Fifth Image"
   "example-image-6.jpg|Sixth Image"
+  "example-image-7.jpg|Seventh Image"
+  "example-image-8.jpg|Eighth Image"
 %}
 ```
 
@@ -1108,7 +1110,9 @@ As this tag plugin relies on an external JS library, the library file ``macy.js`
   <div><img src="example-image-3.jpg" alt="Third Image"></div>
   <div><img src="example-image-4.jpg" alt="Fourth Image"></div>
   <div><img src="example-image-5.jpg" alt="Fifth Image"></div>
-  <div><img src="example-image-7.jpg" alt="Sixth Image"></div>
+  <div><img src="example-image-6.jpg" alt="Sixth Image"></div>
+  <div><img src="example-image-7.jpg" alt="Seventh Image"></div>
+  <div><img src="example-image-8.jpg" alt="Eighth Image"></div>
 </div>  
 <script>
   let macy = new Macy({
