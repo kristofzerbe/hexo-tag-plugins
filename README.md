@@ -1137,7 +1137,7 @@ As this tag plugin relies on an external JS library, the library file ``macy.js`
 </script>
 ```
 
-![Image Masonry Example](assets/tag-masonry-slide-example.png) <-----!
+![Image Masonry Example](assets/tag-image-masonry-example.png)
 
 See a live example at [https://kiko.io/post/Image-Masonry-Tag-Plugin-for-Hexo/](https://kiko.io/post/Image-Masonry-Tag-Plugin-for-Hexo/)
 
