@@ -1158,6 +1158,9 @@ See a live example at [https://kiko.io/post/Image-Masonry-Tag-Plugin-for-Hexo/](
 
 ## History
 
+**2023-09-01**
+- **Image Masonry** added
+
 **2021-12-29**
 - Description of parameters added
 - **Github Readme** added
